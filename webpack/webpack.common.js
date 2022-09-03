@@ -46,4 +46,10 @@ module.exports = {
     performance: {
         hints: false
     },
+    plugins: [
+        new CopyPlugin({
+            patterns: [{ from: ".", to: "../", context: "public" }],
+            options: {},
+        }),
+    ],
 };
