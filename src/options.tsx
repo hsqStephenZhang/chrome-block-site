@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
+import Button from '@mui/material/Button';
 
 const Options = () => {
   const [color, setColor] = useState<string>("");
@@ -64,6 +65,7 @@ const Options = () => {
         </label>
       </div>
       <div>{status}</div>
+      <Button variant="contained">Hello World</Button>
       <button onClick={saveOptions}>Save</button>
     </>
   );

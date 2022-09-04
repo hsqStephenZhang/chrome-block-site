@@ -25,6 +25,7 @@ const Popup = () => {
             color: "#555555",
           },
           (msg) => {
+            window.alert(msg);
             console.log("result message:", msg);
           }
         );
