@@ -14,8 +14,10 @@
         "<all_urls>"
       ],
       "js": [
-        "js/vendor.js",
-        "js/content_script.js"
+        "js/background.js",
+        "js/content_script.js",
+        "js/options.js",
+        "js/popup.js"
       ]
     }
   ],
