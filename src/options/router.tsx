@@ -3,7 +3,6 @@ import { Navigate } from 'react-router-dom';
 import { RouteObject } from 'react-router';
 
 import SidebarLayout from './layouts/SidebarLayout';
-import BaseLayout from './layouts/BaseLayout';
 
 import SuspenseLoader from './components/SuspenseLoader';
 import React from 'react';
@@ -19,11 +18,7 @@ const Loader = (Component: any) => (props: any) =>
 
 const Overview = Loader(lazy(() => import('./content/overview')));
 
-// Dashboards
-
 const WordsBlocker = Loader(lazy(() => import('./content/applications/WordsBlocker')));
-
-// Applications
 
 const CategoryBlocker = Loader(
   lazy(() => import('./content/applications/CategoryBlocker'))
@@ -35,9 +30,7 @@ const UserSettings = Loader(
   lazy(() => import('./content/applications/Users/settings'))
 );
 
-// Components
-
-// Status
+// Other
 
 const Status404 = Loader(
   lazy(() => import('./content/Status/Status404'))
@@ -47,6 +40,10 @@ const StatusComingSoon = Loader(
 );
 const StatusMaintenance = Loader(
   lazy(() => import('./content/Status/Maintenance'))
+);
+
+const About = Loader(
+  lazy(() => import('./content/About'))
 );
 
 const routes: RouteObject[] = [
@@ -90,6 +87,10 @@ const routes: RouteObject[] = [
       {
         path: 'settings',
         element: <UserSettings />
+      },
+      {
+        path: 'about',
+        element: <About />
       },
       {
         path: '*',

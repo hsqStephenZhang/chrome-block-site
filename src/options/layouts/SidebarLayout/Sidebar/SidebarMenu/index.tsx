@@ -12,6 +12,7 @@ import {
 import { NavLink as RouterLink } from 'react-router-dom';
 import { SidebarContext } from '../../../../contexts/SidebarContext';
 
+import InfoIcon from '@mui/icons-material/Info';
 import DesignServicesTwoToneIcon from '@mui/icons-material/DesignServicesTwoTone';
 import BrightnessLowTwoToneIcon from '@mui/icons-material/BrightnessLowTwoTone';
 import MmsTwoToneIcon from '@mui/icons-material/MmsTwoTone';
@@ -29,7 +30,6 @@ import TrafficTwoToneIcon from '@mui/icons-material/TrafficTwoTone';
 import CheckBoxTwoToneIcon from '@mui/icons-material/CheckBoxTwoTone';
 import ChromeReaderModeTwoToneIcon from '@mui/icons-material/ChromeReaderModeTwoTone';
 import WorkspacePremiumTwoToneIcon from '@mui/icons-material/WorkspacePremiumTwoTone';
-import CameraFrontTwoToneIcon from '@mui/icons-material/CameraFrontTwoTone';
 import DisplaySettingsTwoToneIcon from '@mui/icons-material/DisplaySettingsTwoTone';
 import React from 'react';
 
@@ -237,6 +237,17 @@ function SidebarMenu() {
                   startIcon={<AccountCircleTwoToneIcon />}
                 >
                   User Profile
+                </Button>
+              </ListItem>
+              <ListItem component="div">
+                <Button
+                  disableRipple
+                  component={RouterLink}
+                  onClick={closeSidebar}
+                  to="/about"
+                  startIcon={<InfoIcon />}
+                >
+                  About
                 </Button>
               </ListItem>
             </List>
